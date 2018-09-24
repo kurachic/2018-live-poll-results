@@ -7,5 +7,15 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+x <- read_csv("data/elections-poll-me02-1.csv")
+```
+
+```{r}
+x %>%
+  count(response)
 ```
 
